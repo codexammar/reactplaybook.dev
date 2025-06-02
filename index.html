@@ -4,11 +4,26 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/reactplaybook.dev/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 👇 Prevent white flash by setting theme + bg color immediately -->
+    <script>
+      const savedTheme = localStorage.getItem("theme") || "light";
+      document.documentElement.setAttribute("data-theme", savedTheme);
+
+      const bgMap = {
+        light: "#f9fafb",
+        dark: "#121212",
+      };
+      document.write(
+        `<style>body{background-color:${bgMap[savedTheme]};}</style>`
+      );
+    </script>
+
     <title>ReactPlaybook.dev</title>
-    <script type="module" crossorigin src="/reactplaybook.dev/assets/index-CeMRRmpc.js"></script>
-    <link rel="stylesheet" crossorigin href="/reactplaybook.dev/assets/index-Dntpin-r.css">
+    <script type="module" crossorigin src="/reactplaybook.dev/assets/index-4UewzHy6.js"></script>
+    <link rel="stylesheet" crossorigin href="/reactplaybook.dev/assets/index-CNgIXTdq.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"></div>
   </body>
 </html>
