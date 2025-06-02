@@ -37,6 +37,7 @@ function Layout({ children }) {
           borderRadius: "1rem",
           background: "var(--secondary)",
           boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+          transition: "background-color 0.3s ease, color 0.3s ease",
         }}
       >
         {/* Left: Logo / Site Title */}

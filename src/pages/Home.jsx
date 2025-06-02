@@ -15,7 +15,8 @@ function Home() {
         padding: "1.5rem",
         borderRadius: "1rem",
         background: "var(--secondary)",
-        boxShadow: "0 2px 10px rgba(0, 0, 0, 0.05)"
+        boxShadow: "0 4px 12px rgba(0, 0, 0, 0.00)",
+        transition: "background-color 0.3s ease, transform 0.2s ease"
       }}>
         <h2 style={{ marginBottom: "0.5rem" }}>👋 Welcome to ReactPlaybook.dev</h2>
         <p>
