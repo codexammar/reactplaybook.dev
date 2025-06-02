@@ -1,9 +1,14 @@
+import { BrowserRouter } from "react-router-dom";
+import AppRoutes from "./routes/AppRoutes";
+
 function App() {
   return (
-    <main>
-      <h1>ReactPlaybook.dev</h1>
-      <p>A self-documenting portfolio of React concepts.</p>
-    </main>
+    <BrowserRouter basename="/reactplaybook.dev">
+      <main>
+        <h1>ReactPlaybook.dev</h1>
+        <AppRoutes />
+      </main>
+    </BrowserRouter>
   );
 }
 
