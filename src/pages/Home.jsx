@@ -1,21 +1,22 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { concepts } from "../config";
+import "./Home.css";
 
 function Home() {
+  useEffect(() => {
+    document.title = "ReactPlaybook.dev";
+  }, []); // ← runs once when Home mounts
+
   return (
-    <section>
-      <h2>React Concepts</h2>
-      <ul style={{ listStyle: "none", padding: 0 }}>
-        {concepts.map((concept) => (
-          <li key={concept.slug} style={{ marginBottom: "1rem" }}>
-            <Link to={`/concept/${concept.slug}`}>
-              <strong>{concept.title}</strong>
-            </Link>
-            <p style={{ margin: 0 }}>{concept.description}</p>
-          </li>
-        ))}
-      </ul>
-    </section>
+    <div className="concept-grid">
+      {concepts.map((concept) => (
+        <Link to={`/concept/${concept.slug}`} key={concept.slug} className="concept-card">
+          <h3>{concept.title}</h3>
+          <p>{concept.description}</p>
+        </Link>
+      ))}
+    </div>
   );
 }
 

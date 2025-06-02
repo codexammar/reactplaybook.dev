@@ -6,7 +6,7 @@ function UseStateDemo() {
   return (
     <div>
       <p>Clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>Click Me</button>
+      <button className="btn" onClick={() => setCount(count + 1)}>Click Me</button>
     </div>
   );
 }
