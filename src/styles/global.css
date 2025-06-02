@@ -7,10 +7,10 @@
 
 /* Light and Dark Theme Root Variables */
 :root {
-  --bg: #ffffff;
+  --bg: #f9fafb;
   --text: #111111;
   --primary: #3b82f6;        /* Soothing, modern blue */
-  --secondary: #f9fafb;      /* Soft light-grey background */
+  --secondary: #ffffff;      /* Soft light-grey background */
 }
 
 [data-theme="dark"] {
@@ -105,4 +105,21 @@ html, body {
 
 [data-theme="dark"] .btn:hover {
   background-color: #60a5fa;
+}
+
+/* global.css */
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-enter {
+  animation: fadeUp 0.4s ease-out both;
 }

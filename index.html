@@ -4,6 +4,21 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 👇 Prevent white flash by setting theme + bg color immediately -->
+    <script>
+      const savedTheme = localStorage.getItem("theme") || "light";
+      document.documentElement.setAttribute("data-theme", savedTheme);
+
+      const bgMap = {
+        light: "#f9fafb",
+        dark: "#121212",
+      };
+      document.write(
+        `<style>body{background-color:${bgMap[savedTheme]};}</style>`
+      );
+    </script>
+
     <title>ReactPlaybook.dev</title>
   </head>
   <body>
