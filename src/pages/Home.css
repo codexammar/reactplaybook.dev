@@ -44,3 +44,22 @@
 [data-theme="dark"] .concept-card:hover {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
 }
+
+@media (max-width: 600px) {
+  .concept-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .concept-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .concept-card p {
+    font-size: 0.85rem;
+  }
+
+  main {
+    padding-inline: 1rem !important;
+  }
+}
